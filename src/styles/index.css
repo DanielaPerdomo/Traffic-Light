@@ -9,16 +9,23 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+.trafficTop{
+    width: 30px;
+    height: 100px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .traffic-light{
     width: 200px;
     height: 400px;
-    margin: 50px auto;
+    margin: 0 auto 50px;
     border-radius: 40px;
     background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    aling-items:
 }
 .light-red{
     width: 100px;
@@ -44,6 +51,19 @@
     border-radius: 50%;
     background-color: green;
 }
+.light-purple {
+    width: 100px;
+    height: 100px;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: purple;
+}
 .shadows{
     box-shadow: 0 0 30px white;
+}
+.buttom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

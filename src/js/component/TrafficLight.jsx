@@ -2,8 +2,6 @@
 import React, {useState} from "react";
 import ReactDOM from "react-dom";
 
-
-
 export function TrafficLight (){
     const [color, setColor] = useState("")
     const [activePurple, setActivePurple] = useState(false)
@@ -16,8 +14,8 @@ const selectedColor = (lightColor) =>{
     }
 }
     return(
-        <React.Fragment>
-            <div className="holder"></div>
+        <div className="d-flex align-items-center flex-column">
+            <div className="trafficTop"></div>
 		    <div className="traffic-light">
                 <div className={`light-red ${
                     color === "red" ? "shadows" : ""  
@@ -40,17 +38,17 @@ const selectedColor = (lightColor) =>{
                     selectedColor("green")
                 }}>
                 </div>
-                {activePurple === true ? (<div className={`light-green ${
-                    color=="green" ? "shadows" : ""  
+                {activePurple === true ? (<div className={`light-purple ${
+                    color=="purple" ? "shadows" : ""  
                 }`} onClick={(event)=>{
-                    console.log("green")
-                    selectedColor("green")
+                    console.log("purple")
+                    selectedColor("purple")
                 }}>
                 </div>) : null }
 		    </div>
-            <div>
+            <div className="buttom">
                 <button className="btn btn-primary" onClick={() => setActivePurple(!activePurple)}> {activePurple ? "Desactivar" : "Activar"} </button>
             </div>
-        </React.Fragment> 
+        </div> 
     )
 }
